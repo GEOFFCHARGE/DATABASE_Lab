@@ -1,2 +1,5 @@
-# DATABASE_Lab
-2025 Database System concepts Year 2 Semester 1
+# Database System concepts code
+**This repository is part of Database System concepts course @ School of Information Technology, KMITL**
+
+## ⚠️ Warning 
+Some of the code may be incomplete because I didn't do it or couldn't do it
