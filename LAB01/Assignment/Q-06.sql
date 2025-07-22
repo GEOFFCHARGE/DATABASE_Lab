@@ -2,4 +2,4 @@
    ของ status เป็น char 50 ตัวอักษร */
 
 ALTER TABLE title_copy
-MODIFY status VARCHAR(50);
+MODIFY status CHAR(50);
