@@ -3,4 +3,8 @@
    ผู้จัดการของพนักงานคนนั้นๆ (ตั้งชื่อคอลัมน์ของผู้จัดการคือ Mgr First Name,
    Mgr Last Name, Mgr Hired) (ใช้ ON Clause) */
 
-
+SELECT e.first_name, e.last_name, e.hire_date, m.first_name AS "Mgr First Name", m.last_name AS "Mgr Last Name", m.hire_date AS "Mgr Hired"
+FROM employees AS e
+JOIN employees AS m
+ON (e.manager_id = m.employee_id)
+WHERE e.hire_date < m.hire_date;
