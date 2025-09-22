@@ -1,0 +1,6 @@
+/* แสดงนามสกุล รหัสแผนก และรหัสงานของพนักงานที่แผนก
+   ทำงานตั้งอยู่ใน location รหัส 1700 */
+
+SELECT last_name, department_id, job_id
+FROM employees
+WHERE department_id IN (SELECT department_id FROM departments WHERE location_id = 1700);
