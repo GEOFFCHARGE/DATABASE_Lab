@@ -6,5 +6,5 @@ SELECT l.location_id, l.city
 FROM locations l
 LEFT OUTER JOIN departments d
 ON (l.location_id = d.location_id)
-WHERE d.department_id IS NULL
+WHERE d.location_id IS NULL
 ORDER BY l.city;
