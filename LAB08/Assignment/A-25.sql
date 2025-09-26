@@ -5,9 +5,6 @@
 
 SELECT productLine AS "Product line", SUM(quantityInStock + quantityOrderedNew) AS Quantity
 FROM products
-JOIN (SELECT productCode, SUM(quantityOrdered) AS quantityOrderedNew
-      FROM orderdetails
-      GROUP BY productCode
-      HAVING quantityOrderedNew > 50) od
+JOIN (SELECT productCode, SUM(quantityOrdered) AS quantityOrderedNew FROM orderdetails GROUP BY productCode HAVING quantityOrderedNew > 50) od
 USING (productCode)
 GROUP BY productLine;

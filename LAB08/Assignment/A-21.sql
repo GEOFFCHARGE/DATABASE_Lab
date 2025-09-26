@@ -6,8 +6,5 @@ SELECT e.firstName, e.lastName, o.city
 FROM employees e
 JOIN offices o
 USING (officeCode)
-WHERE o.country IN (SELECT c.country
-                    FROM customers c
-                    GROUP BY c.country
-                    HAVING COUNT(c.customerNumber) > 1)
+WHERE o.country IN (SELECT c.country FROM customers c GROUP BY c.country HAVING COUNT(c.customerNumber) > 1)
 ORDER BY o.city;
