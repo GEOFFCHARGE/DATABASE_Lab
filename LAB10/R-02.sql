@@ -1,0 +1,6 @@
+/* เขียน SQL statement แสดงชื่อถนนและชื่อเมืองของอสังหาริมทรัพย์
+   สำหรับให้เช่า (PropertyForRent) ที่ไม่มีเจ้าของ (OwnerNo) */
+
+SELECT PropStreet, PropCity
+FROM propertyforrent
+WHERE OwnerNo IS NULL;
